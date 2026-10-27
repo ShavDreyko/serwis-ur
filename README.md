@@ -1,22 +1,28 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Serwis UR - Asystent Serwisu
 
-# Run and deploy your AI Studio app
+Aplikacja Android do zarządzania zadaniami serwisowymi / utrzymania ruchu (UR).
 
-This contains everything you need to run your app locally.
+## Funkcje
+- Zadania serwisowe z priorytetami, statusami i kategoriami (w tym **Nadgodziny**)
+- Notatki ze zdjęciami (zdjęcia są trwale zapisywane w aplikacji)
+- Kalendarz i podsumowanie miesięczne
+- Generowanie raportu PDF z opcjonalnymi zdjęciami z notatek
+- Prace dodatkowe
 
-View your app in AI Studio: https://ai.studio/apps/2b1a627e-da36-45d9-ab46-68a0fbe9aead
+## Budowanie
 
-## Run Locally
+### Lokalnie (Android Studio)
+1. Otwórz projekt w Android Studio
+2. Zsynchronizuj Gradle
+3. `Build → Build Bundle(s) / APK(s) → Build APK(s)`
 
-**Prerequisites:**  [Android Studio](https://developer.android.com/studio)
+### CI (GitHub Actions)
+Przy każdym pushu na `main` uruchamia się workflow **Android CI**, który buduje debug APK.
 
+Po zakończeniu builda:
+1. Wejdź w zakładkę **Actions**
+2. Wybierz ostatni workflow run
+3. Pobierz artefakt **app-debug-apk**
 
-1. Open Android Studio
-2. Select **Open** and choose the directory containing this project
-3. Allow Android Studio to fix any incompatibilities as it imports the project.
-4. Create a file named `.env` in the project directory and set `GEMINI_API_KEY` in that file to your Gemini API key (see `.env.example` for an example)
-5. Remove this line from the app's `build.gradle.kts` file: `signingConfig = signingConfigs.getByName("debugConfig")`
-6. Run the app on an emulator or physical device
-7. If you have already published your app in AI Studio, please [request upload key reset](https://support.google.com/googleplay/android-developer/answer/9842756#zippy=%2Crequest-an-upload-key-reset) in Google Play Console.
+## Repo
+https://github.com/ShavDreyko/serwis-ur
