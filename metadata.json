@@ -1,0 +1,6 @@
+{
+  "name": "Serwis UR",
+  "description": "Asystent technika serwisu utrzymania ruchu z zarządzaniem zadaniami, awariami, zdjęciami, pracami dodatkowymi, powiadomieniami i raportami PDF.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
